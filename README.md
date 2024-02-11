@@ -37,3 +37,10 @@ constant factors.
 Describe your reasoning and the conclusion you've come to. Your reasoning is
 most important -- you can easily find the answer, but you need to demonstrate
 that you've understood the concept. Add your answer to this markdown file.
+
+For insertion sort, the best case is $\Theta(n)$ because it will iterate through every element in the list, so n times.
+In the average case it will go through the inner loop because it needs sorted. 1/2 of the elements will need swapped because it isn't in descending order, and it isn't already sorted.
+For each swap the inner loop has to compare it to all the already sorted elements and for the last element that could mean n-1 comparisons and swaps. 
+So if around 1/2 of the array needs sorted, and the outer loop iterates n times, and the inner loop could iterate i-1 times for any element,
+then it would be 1/2 * (n-1). Multiply this by the iterations of the outer loop n and we have (n^2 -n)/2. Discarding of the constant factors we get n^2.
+So the average case for insertion sort is $\Theta(n^2)$.
